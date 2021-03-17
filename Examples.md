@@ -40,7 +40,7 @@ https://undertow.io/undertow-docs/undertow-docs-2.0.0/predicates-attributes-hand
             <server name="default-server">
                 <http-listener name="default" socket-binding="http" record-request-start-time="true" redirect-socket="https"/>
                 <host name="default-host" alias="localhost">
-                    <access-log  use-server-log="true" predicate="not equals('200', %s) and not equals('404', %s)" pattern="%t %h request:&quot;%r&quot; response_code:%s response_time_ms:%D bytes_sent:%b query_string:&quot;%q&quot; &quot;%{i,cipher}&quot; &quot;%{i,True-Client-IP}&quot; &quot;%{i,tlsversion}&quot; &quot;%{i,Referer}&quot; &quot;%{i,User-Agent}&quot; &quot;%{c,dcenv}&quot; &quot;%{c,dcenvi}&quot; &quot;%{c,tgenv}&quot; &quot;%{c,Akamai-IP}&quot; &quot;%{c,AKMACHINEID}&quot; &quot;%{c,request-id-akamai}&quot; &quot;%{c,AK_REQUEST_EID}&quot; &quot;%{c,AK_REQUEST_PID}&quot; %S &quot;%I&quot;"/>
+                    <access-log  use-server-log="true" predicate="not equals('200', %s) and not equals('404', %s)" pattern="%t %h request:&quot;%r&quot; response_code:%s response_time_ms:%D bytes_sent:%b query_string:&quot;%q&quot;"/>
                     <filter-ref name="server-header"/>
                     <filter-ref name="x-powered-by-header"/>
                 </host>
